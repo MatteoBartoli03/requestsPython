@@ -1,18 +1,12 @@
 import requests
+data = requests.get("http://192.168.1.231:8080/es52")
+data = data.json()
 
-req = requests.get("http://192.168.1.231:8080/esercizi/2", headers = {"x-data" : "True"})
+final = 
 
-data = req.json()
+body = {
+	"value" : final
+}
 
-lista = data["data"]
-
-ciao = []
-
-for x in lista:
-	ciao.append(x[0])
-
-print(ciao)
-
-res = requests.post("http://192.168.1.231:8080/esercizi/2", json = {"data" : ciao})
-
-print(res.json())
+a = requests.post("http://192.168.1.231:8080/es5", json = body).json()
+print(a["message"])

@@ -2,10 +2,7 @@ import requests
 data = requests.get("http://192.168.1.231:8080/es3")
 data = data.json()
 
-final = []
-
-for x in data['data']:
-	final.append(x[0])
+final = 
 
 body = {
 	"value" : final
